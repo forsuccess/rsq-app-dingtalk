@@ -1,11 +1,15 @@
 <template>
-	<div class="">
-    <input type="text" PLACEHOLDER="在这里输入"  v-model="editItem.ptitle">
-    <button @click="getinboxItem"></button>
+	<div class="root">
+    <input type="text" PLACEHOLDER="在这里写下想法"  v-model="editItem.ptitle">
+    <!--<span class="create">创建</span>-->
     <ul>
-    <li v-for="shouna in inboxitems">
-      {{shouna}}
-    </li>
+      <li>
+        <span class="left">测试数据</span>
+        <!--<span class="right">我收到的</span>-->
+      </li>
+      <li><span class="left">测试数据</span></li>
+      <li><span class="left">测试数据</span></li>
+      <li><span class="left">测试数据</span></li>
     </ul>
 	</div>
 </template>
@@ -62,11 +66,74 @@ export default {
   }
 }
 </script>
-<style>
-  button{
-    width: 20px;
-    height: 20px;
+<style scoped>
+ .root{
+   position:relative;
+ }
+  input{
+    height:1.226rem;
+    background: #FFFFFF;
+    border-bottom:0.5px solid #E3E3E3;
+    border-top:0.5px solid #E3E3E3;
+    margin-top: 1.974rem;
+  }
+  input:-webkit-input-placehoder{
+    font-family: PingFangSC-Regular;
+    font-size: 17px;
+    color: #999999;
+    line-height: 22px;
+  }
+  ul{
+
+    margin-top:0.4rem;
+    border-bottom:0.5px solid #E3E3E3;
+    border-top:0.5px solid #E3E3E3;
+    padding-left:4.3%;
+  }
+  .left{
+    display: inline-block;
+    font-family: PingFangSC-Regular;
+    font-size: 17px;
+    color: #222222;
+    line-height: 22px;
+    margin-top:0.391rem;
+    margin-left:4.3%
+
+  }
+  span{
+    display: inline-block;
+  }
+  li{
+    border-bottom: 0.5px solid #E3E3E3;
+    height: 1.258rem;
   }
 
+  li:last-child{
+    border-bottom: none;
+  }
+  .right{
+    float: right;
+    margin-top: 3%;
+    margin-right: 3.2%;
+
+    border:0.5px solid #8C8C8C;
+    font-family: PingFangSC-Regular;
+    font-size: 12px;
+    color: #8C8C8C;
+    border-radius: 2px;
+  }
+  .create{
+    display: block;
+    text-align: center;
+    border: 1px solid #55A8FD;
+    border-radius: 2px;
+    height: 9%;
+    width:14.1%;
+    font-size: 16px;
+    color:#55A8FD;
+    position: absolute;
+    top:2.25rem;
+    left: 82.4%;
+  }
 
 </style>

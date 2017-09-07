@@ -39,6 +39,7 @@
 				</v-touch>
 			</div>
 		</div>
+
 	</div>
 </template>
 <script>

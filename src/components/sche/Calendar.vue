@@ -145,8 +145,9 @@
 <style lang="scss" scope>
   @import '../../assets/css/variables.scss';
 
-  .c-cal-main {position: relative;color:#999;font-size: 1.4rem;
-    height: 81px;background: $bgColor;margin-bottom:12px;
+  .c-cal-main {
+    position: relative;color:#999;font-size: 1.4rem;
+    height: 3.786rem;background: $bgColor;margin-bottom:12px;
     border-bottom: 0.5px solid #E4E4E4;
   }
   .cal-title {
@@ -166,7 +167,7 @@
     width: 100%;height: 100%;margin: 0;
   }
   .c-cal-main td {}
-  .cal-weekday {}
+  .cal-weekday {font-size: 0.293rem}
   .cal-content {
     position: absolute; top: 30px;left: 0;right: 0;padding:0;
     width: 100%;height:40px;overflow: hidden;
@@ -175,6 +176,9 @@
   .cal-inner {
     left: -100%;
     position: absolute;top:0;width:100%;bottom:0;overflow: visible;white-space:nowrap;
+  }
+  .cal-day{
+
   }
   .animate {
     transition: transform 0.3s ease;

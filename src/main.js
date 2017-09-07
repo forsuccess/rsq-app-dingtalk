@@ -27,25 +27,34 @@ Vue.use(VueTouch)
 
 Vue.config.productionTip = false
 
-window.rsqadmg.exec('auth', {
-  success: function (rsqUser, authUser) {
-    store.state.loginUser = {
-      rsqUser: rsqUser,
-      authUser: authUser
-    }
+// window.rsqadmg.exec('auth', {
+//   success: function (rsqUser, authUser) {
+//     store.state.loginUser = {
+//       rsqUser: rsqUser,
+//       authUser: authUser
+//     }
+//
+//     store.state.env.isAddNav = true
+//     store.state.env.dType = 'p'
+//
+//     /* eslint-disable no-new */
+//     new Vue({
+//       el: '#app',
+//       router,
+//       store,
+//       template: '<App/>',
+//       components: { App }
+//     })
+//   }
+// })
 
-    store.state.env.isAddNav = true
-    store.state.env.dType = 'p'
-
-    /* eslint-disable no-new */
-    new Vue({
-      el: '#app',
-      router,
-      store,
-      template: '<App/>',
-      components: { App }
-    })
-  }
+/* eslint-disable no-new */
+new Vue({
+  el: '#app',
+  router,
+  store,
+  template: '<App/>',
+  components: { App }
 })
 
 // 获取到签名之后再启动vue.js

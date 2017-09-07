@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import store from '@/store'
-import api from '@/api'
-
+// import store from '@/store'
+// import api from '@/api'
+import time from 'com/pub/time'
 import Login from 'com/Login'
 import Sche from 'com/sche/Main'
 import Inbox from 'com/inbox/Main'
@@ -36,6 +36,12 @@ const router = new Router({
       path: '/me/kefu',
       name: 'kefu',
       component: kefu,
+      meta: {requireAuth: true}
+    },
+    {
+      path: '/pub/time',
+      name: 'time',
+      component: time,
       meta: {requireAuth: true}
     },
     // {
@@ -77,30 +83,30 @@ const router = new Router({
   ]
 })
 
-router.beforeEach((to, from, next) => {
-  store.state.env.isShowNav = false
-  store.state.sys.currentPath = to.path
-
-  if (!to.matched.some(record => record.meta.requireAuth)) {
-    return next()
-  }
-  var currentUser = store.state.loginUser
-  if (currentUser == null || currentUser.rsqUser == null) {
-    currentUser = currentUser || {}
-    api.system.checkAuth()
-      .then((res) => {
-        if (res.id) {
-          currentUser.rsqUser = res
-          store.state.loginUser = currentUser
-          next()
-        } else {
-          next('/login')
-        }
-      })
-  } else {
-    window.rsqadmg.log('login user found')
-    next()
-  }
-})
+// router.beforeEach((to, from, next) => {
+//   store.state.env.isShowNav = false
+//   store.state.sys.currentPath = to.path
+//
+//   if (!to.matched.some(record => record.meta.requireAuth)) {
+//     return next()
+//   }
+//   var currentUser = store.state.loginUser
+//   if (currentUser == null || currentUser.rsqUser == null) {
+//     currentUser = currentUser || {}
+//     api.system.checkAuth()
+//       .then((res) => {
+//         if (res.id) {
+//           currentUser.rsqUser = res
+//           store.state.loginUser = currentUser
+//           next()
+//         } else {
+//           next('/login')
+//         }
+//       })
+//   } else {
+//     window.rsqadmg.log('login user found')
+//     next()
+//   }
+// })
 
 export default router

@@ -26,6 +26,9 @@
   }
 </script>
 <style>
+  .rsq-webview{
+    height:17.78rem;
+  }
   .shouye{
     display:flex;
     align-items: center;

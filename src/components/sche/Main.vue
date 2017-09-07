@@ -15,6 +15,20 @@
       <img src="../../assets/日程.png" alt="">
       <p class="shouye">还没有日程，赶快去创建吧</p>
     </div>
+    <div class="bot" style="position: fixed;bottom: 0;left: 0;right: 0;">
+      <div class="left">
+        <i class="icon2-schedule richeng"></i>
+        <p class="sche">日程</p>
+      </div>
+      <div class="mid">
+        <i class="icon2-add-circle add" ></i>
+      </div>
+      <div class="right">
+        <i class="icon2-member me"></i>
+
+        <p class="my">我</p>
+      </div>
+    </div>
     <!--<div class="float-action-button" v-touch:tap="showCreate">-->
     <!--<i class="icon icon-add"></i>-->
     <!--</div>-->
@@ -75,17 +89,85 @@
   }
 </script>
 <style scoped>
+  @import "icomoon2.css";
+  .bot{
+
+    height: 1.306rem;
+  }
+
+  .richeng{
+    font-size: 22px;
+  }
+  .sche{
+    font-family: PingFangSC-Regular;
+    font-size: 10px;
+    color: #999999;
+    letter-spacing: 0;
+    margin:0;
+    padding:0;
+    margin-top:-8px;
+  }
+  .me{
+    font-size: 22px;
+  }
+  .my{
+    font-family: PingFangSC-Regular;
+    font-size: 10px;
+    color: #999999;
+    letter-spacing: 0;
+    margin: 0;
+    padding:0;
+    margin:0 auto;
+    margin-top:-8px;
+  }
+  .left{
+    position: absolute;
+    left: 2.053rem;
+    bottom:1px;
+    padding-bottom:5px;
+  }
+  .right{
+    text-align: center;
+    padding-bottom:5px;
+    position: absolute;
+    right: 2.11rem;
+    bottom:1px;
+  }
+  .mid{
+    text-align: center;
+
+
+
+  }
+  .add{
+    color:#4D93DE;
+    font-size: 29.6px;
+
+
+  }
+  .bot:after{
+    content:'';
+    display: block;
+    clear: both;
+  }
   .itm-lst{
     text-align: center;
+    height:12.693rem;
+
   }
   .shouye{
-    margin-top:15.7px;
+    padding: 0;
+    margin:0;
+    margin-top:0.418rem;
 
   }
   img{
-    width: 70px;
-    height: 70px;
-    margin-top:137px ;
+    width: 1.866rem;
+    height: 1.866rem;
+    margin-top:3.653rem ;
+  }
+  .content--cal{
+      height: 100%;
   }
 
 </style>
