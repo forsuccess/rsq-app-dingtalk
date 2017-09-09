@@ -1,7 +1,7 @@
 <template>
-	<div class="root">
+  <div class="root">
     <input type="text" PLACEHOLDER="在这里写下想法"  v-model="editItem.ptitle">
-    <!--<span class="create">创建</span>-->
+    <div class="create">创建</div>
     <ul>
       <li>
         <span class="left">测试数据</span>
@@ -11,65 +11,65 @@
       <li><span class="left">测试数据</span></li>
       <li><span class="left">测试数据非常长的数据测试数据非常长的数据非常长</span></li>
     </ul>
-	</div>
+  </div>
 </template>
 <script>
   import dateUtil from 'ut/dateUtil';
-export default {
-  data () {
-    return {
-      editItem:{
-        ptitle:'',
+  export default {
+    data () {
+      return {
+        editItem:{
+          ptitle:'',
 
 
 
-        dates: null,
-        startDate: null,
-        endDate: null,
+          dates: null,
+          startDate: null,
+          endDate: null,
 
 
 
+        }
       }
-    }
-  },
-  methods: {
-    getPlanedTime(){
-      var ei = this.editItem;
-      var result = dateUtil.backend2frontend(ei.dates, ei.startDate, ei.endDate);
-      return (result && result.dateResult) ? result.dateResult[0] : null;
     },
-    getinboxItem(){
-      console.log("dispath以前")
-      var planTime = this.getPlanedTime();
+    methods: {
+      getPlanedTime(){
+        var ei = this.editItem;
+        var result = dateUtil.backend2frontend(ei.dates, ei.startDate, ei.endDate);
+        return (result && result.dateResult) ? result.dateResult[0] : null;
+      },
+      getinboxItem(){
+        console.log("dispath以前")
+        var planTime = this.getPlanedTime();
 //					if(!planTime){
 //						return rsqadmg.execute('alert', {message: '请选择任务日期'});
 //					}
-      //  坑爹啊。。。格式不统一，需要做额外的hack
-     // this.editItem.pPlanedTime = dateUtil.dateNum2Text(planTime, '-') + ' 00:00:00';
-      this.$store.dispatch('createInboxItem', {props: this.editItem})
-        .then(function(){
-          console.log("马上就创建成功了")
-          rsqadmg.exec('hideLoader');
-          rsqadmg.execute('toast', {message: '创建成功'});
-          //that.$router.replace(window.history.back());
-        });
-    }
+        //  坑爹啊。。。格式不统一，需要做额外的hack
+        // this.editItem.pPlanedTime = dateUtil.dateNum2Text(planTime, '-') + ' 00:00:00';
+        this.$store.dispatch('createInboxItem', {props: this.editItem})
+          .then(function(){
+            console.log("马上就创建成功了")
+            rsqadmg.exec('hideLoader');
+            rsqadmg.execute('toast', {message: '创建成功'});
+            //that.$router.replace(window.history.back());
+          });
+      }
     },
 
-  computed:{
-    inboxitems(){
-      return this.$store.state.inbox.items;
+    computed:{
+      inboxitems(){
+        return this.$store.state.inbox.items;
+      }
+    },
+    mounted () {
+      this.$store.dispatch('setNav', true)
     }
-  },
-  mounted () {
-    this.$store.dispatch('setNav', true)
   }
-}
 </script>
 <style scoped>
- .root{
-   position:relative;
- }
+  .root{
+    position:relative;
+  }
   input{
     height:1.226rem;
     background: #FFFFFF;
@@ -95,7 +95,7 @@ export default {
     font-family: PingFangSC-Regular;
     font-size: 17px;
     color: #222222;
-     text-overflow: ellipsis;
+    text-overflow: ellipsis;
 
   }
   span{
@@ -127,13 +127,14 @@ export default {
     text-align: center;
     border: 1px solid #55A8FD;
     border-radius: 2px;
-    height: 9%;
+
     width:14.1%;
     font-size: 16px;
     color:#55A8FD;
     position: absolute;
-    top:2.25rem;
+    top:0.25rem;
     left: 82.4%;
+    padding: 2px;
   }
 
 </style>

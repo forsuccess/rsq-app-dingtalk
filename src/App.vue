@@ -26,8 +26,9 @@
   }
 </script>
 <style>
+
   .rsq-webview{
-    height:17.78rem;
+    height:100%;
   }
   .shouye{
     display:flex;

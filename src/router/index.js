@@ -12,6 +12,17 @@ import Plan from 'com/plan/Main'
 import Doc from 'com/doc/Main'
 import Me from 'com/me/Main'
 import kefu from 'com/me/kefu'
+import schenew from 'com/sche/schenew'
+import schemain from 'com/sche/schemain'
+import remind from 'com/pub/remind'
+import timeAndRemind from 'com/pub/timeAndRemind'
+import childtask from 'com/sche/childtask'
+import scheDetail from 'com/sche/scheDetail'
+import timeOpen from 'com/pub/timeOpen'
+import inboxNew from 'com/inbox/inboxNew'
+import repeat from 'com/sche/repeat'
+import date from 'com/sche/date'
+import coment from 'com/pub/coment'
 Vue.use(Router)
 
 const router = new Router({
@@ -27,9 +38,69 @@ const router = new Router({
       meta: {requireAuth: true}
     },
     {
+      path: '/pub/coment',
+      name: 'coment',
+      component: coment,
+      meta: {requireAuth: true}
+    },
+    {
+      path: '/sche/date',
+      name: 'date',
+      component: date,
+      meta: {requireAuth: true}
+    },
+    {
+      path: '/inbox/inboxNew',
+      name: 'inboxNew',
+      component: inboxNew,
+      meta: {requireAuth: true}
+    },
+    {
+      path: '/sche/scheDetail',
+      name: 'scheDetail',
+      component: scheDetail,
+      meta: {requireAuth: true}
+    },
+    {
+      path: '/pub/timeOpen',
+      name: 'timeOpen',
+      component: timeOpen,
+      meta: {requireAuth: true}
+    },
+    {
+      path: '/sche/childtask',
+      name: 'childtask',
+      component: childtask,
+      meta: {requireAuth: true}
+    },
+    {
       path: '/inbox',
       name: 'inbox',
       component: Inbox,
+      meta: {requireAuth: true}
+    },
+    {
+      path: '/sche/schenew',
+      name: 'schenew',
+      component: schenew,
+      meta: {requireAuth: true}
+    },
+    {
+      path: '/pub/timeAndRemind',
+      name: 'timeAndRemind',
+      component: timeAndRemind,
+      meta: {requireAuth: true}
+    },
+    {
+      path: '/pub/remind',
+      name: 'remind',
+      component: remind,
+      meta: {requireAuth: true}
+    },
+    {
+      path: '/sche/schemain',
+      name: 'schemain',
+      component: schemain,
       meta: {requireAuth: true}
     },
     {
@@ -73,6 +144,12 @@ const router = new Router({
       path: '/me',
       name: 'me',
       component: Me,
+      meta: {requireAuth: true}
+    },
+    {
+      path: '/sche/repeat',
+      name: 'repeat',
+      component: repeat,
       meta: {requireAuth: true}
     },
     {
