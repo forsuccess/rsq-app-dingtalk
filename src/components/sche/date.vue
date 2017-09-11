@@ -7,8 +7,10 @@
       <span class="confirm">确定</span>
     </li>
     <li class="">
-      <span class="repeat">每周重复</span>
-      <span class="norepeat">每月重复</span>
+
+      <span class="dayrepeat">每周重复</span>
+      <span class="monthrepeat">每月重复</span>
+
     </li>
     <li>
       <span>周一</span>
@@ -26,7 +28,7 @@
       <span>周五</span>
     </li>
     <li >
-      <span class="last">每周的周一，周二，周三重复</span></li>
+      <span class="repeat-last">每周的周一，周二，周三重复</span></li>
   </ul>
 
 
@@ -43,7 +45,7 @@ ul{
 .finish{
   position:absolute;
   right:0.63rem;
-  top:1.73rem;
+  top:0.28rem;
   color: #55A8FD;
   font-weight: bold;
   font-size: 20px;
@@ -52,44 +54,48 @@ span{
   font-family: PingFangSC-Regular;
   font-size: 17px;
   letter-spacing: 0;
-  line-height: 1.173rem;
+  display: block;
 }
 .cancel{
    position: absolute;
-   left:3%;
-   top:6%
+   left:0.3rem;
+   top:0.01rem;
 }
 .confirm{
   position: absolute;
   left:85%;
 
-  top:6%
+  top:0.01rem;
 }
   .cancel,.confirm{
     color: #007AFF;
   }
   .frequent{
-    color:  #3D3D3D;;
+    color:  #3D3D3D;
+
   }
-  .repeat{
+  .dayrepeat{
     margin-left: 2.84rem;
 
     font-size: 15px;
     color: #55A8FD;
   }
-  .norepeat{
-    margin-left: 0.84rem;
+  .monthrepeat{
+    position: absolute;
+    right: 2.83rem;
+    top:0;
     font-size: 15px;
     color: #8C8C8C;
   }
   li{
     position: relative;
-    padding-left: 3%;
+    padding-left: 0.34rem;
     color: #333333;
     border-bottom: 0.5px solid #E3E3E3;
-
+    height:1.173rem;
+    line-height:1.173rem;
   }
-  .last{
+  .repeat-last{
     font-size: 13px;
     color: #3D3D3D;
   }

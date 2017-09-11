@@ -1,6 +1,9 @@
 <template>
   <div class="root">
-  <div class="whole">全天</div>
+  <div class="whole">
+    <span>全天</span>
+   <input class="mui-switch" type="checkbox" checked>
+  </div>
   <ul>
     <li class="start">
       <span>开始时间</span>
@@ -17,16 +20,75 @@
   </div>
   </div>
 
-
-
 </template>
 <style scoped>
+
   @import "icomoon2.css";
+  .mui-switch {
+    width: 52px;
+    height: 31px;
+    position: absolute;
+    top:0.2rem;
+    right:0.3rem;
+    border: 1px solid #dfdfdf;
+    background-color: #fdfdfd;
+    box-shadow: #dfdfdf 0 0 0 0 inset;
+    border-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-clip: content-box;
+    display: inline-block;
+    -webkit-appearance: none;
+    user-select: none;
+    outline: none; }
+  .mui-switch:before {
+    content: '';
+    width: 29px;
+    height: 29px;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    border-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4); }
+  .mui-switch:checked {
+    border-color: #67B2FE;
+    box-shadow: #67B2FE 0 0 0 16px inset;
+    background-color: #67B2FE; }
+  .mui-switch:checked:before {
+    left: 21px; }
+  .mui-switch.mui-switch-animbg {
+    transition: background-color ease 0.4s; }
+  .mui-switch.mui-switch-animbg:before {
+    transition: left 0.3s; }
+  .mui-switch.mui-switch-animbg:checked {
+    box-shadow: #dfdfdf 0 0 0 0 inset;
+    background-color: #67B2FE;
+    transition: border-color 0.4s, background-color ease 0.4s; }
+  .mui-switch.mui-switch-animbg:checked:before {
+    transition: left 0.3s; }
+  .mui-switch.mui-switch-anim {
+    transition: border cubic-bezier(0, 0, 0, 1) 0.4s, box-shadow cubic-bezier(0, 0, 0, 1) 0.4s; }
+  .mui-switch.mui-switch-anim:before {
+    transition: left 0.3s; }
+  .mui-switch.mui-switch-anim:checked {
+    box-shadow: #67B2FE 0 0 0 16px inset;
+    background-color: #64bd63;
+    transition: border ease 0.4s, box-shadow ease 0.4s, background-color ease 1.2s; }
+  .mui-switch.mui-switch-anim:checked:before {
+    transition: left 0.3s; }
   ul,.last{
     background-color: white;
   }
   .whole{
     background-color: white;
+    position: relative;
   }
   .arrow{
     position: absolute;

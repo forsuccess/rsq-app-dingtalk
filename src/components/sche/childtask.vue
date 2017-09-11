@@ -32,13 +32,19 @@
   @import "icomoon2.css";
   .select{
     font-size: 17px;
-
+    position: absolute;
+    top:0.38rem;
   }
   .top{
+    background-color: white;
+    position: relative;
+    line-height: 1.226rem;;
     margin-top:1.956rem;
     padding-left:5%
   }
   .add{
+    position: absolute;
+    top:0.4rem;
     font-size: 15px;
     background-color: #55A8FD;
     color:white;
@@ -52,11 +58,11 @@
 
   }
   .top>span{
-    display: inline-block;
+    display: block;
     font-family: PingFangSC-Regular;
     font-size: 17px;
     color: #55A8FD;
-    line-height: 1.226rem;;
+
   }
 
 
@@ -72,11 +78,12 @@
     background-color: white;
   }
   span{
+    display: block;
+    margin-left: 0.8rem;
     font-family:PingFangSC-Regular;
     font-size: 17px;
     color: #333333;
-    height: 1.226rem;
-    line-height: 1.226rem;
+
   }
   .date{
     position:absolute ;
@@ -95,7 +102,8 @@
     padding-left: 5%;
   }
   li{
-
+    height: 1.226rem;
+    line-height: 1.226rem;
     padding:0;
     position: relative;
     border-bottom:0.5px solid #DADADA ;

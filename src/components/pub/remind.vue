@@ -22,6 +22,8 @@
 <style scoped>
   @import "icomoon2.css";
   .remind{
+    display: block;
+    margin-left: 0.2rem;
     font-family: PingFangSC-Regular;
     font-size: 16px;
     color: #55A8FD;
@@ -38,7 +40,7 @@
   .finish{
     position:absolute;
     right:0.63rem;
-    top:0.43rem;
+    top:0.33rem;
     color: #55A8FD;
     font-weight: bold;
   }
@@ -54,14 +56,15 @@
   }
 
   span{
-    line-height: 1.112rem;
-     display:inline-block;
+    /*line-height: 1.112rem;*/
+     display:block;
     margin-left: 0.45rem;
 
   }
   li{
     padding:5px;
-    height: 1.112rem;
+    line-height: 0.912rem;
+    height: 0.912rem;
     border-bottom: 0.5px solid #E3E3E3;
     font-family: PingFangSC-Regular;
     font-size: 17px;

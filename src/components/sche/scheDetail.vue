@@ -9,73 +9,117 @@
     <input type="text" placeholder="添加任务描述">
     </li>
   </ul>
-  <ul class="sec">
+  <ul class="sec-">
     <li>
       <i class="icon2-schedule schedule"></i>
-      <div class="right">
       <span>日期</span>
-      <span class="time">今天</span>
+      <span class="date">今天</span>
       <i class="icon2-arrow-right-small arrow"></i>
-      </div>
     </li>
     <li>
       <i class="icon2-alarm alarm"></i>
-      <div class="right">
-      <span>日期</span>
+      <span>时间</span>
       <span class="time">全天</span>
       <i class="icon2-arrow-right-small arrow"></i>
-      </div>
     </li>
     <li>
       <i class="icon2-member member"></i>
-      <div class="right">
-      <span>日期</span>
-      <span class="time">刘浩</span>
+      <span>执行人</span>
+      <span class="person">刘浩</span>
       <i class="icon2-arrow-right-small arrow"></i>
-      </div>
-
     </li>
     <li>
       <i class="icon2-subplan-web sub"></i>
-      <div class="right">
-      <span>日期</span>
+      <span>子任务</span>
       <span class="time"></span>
       <i class="icon2-arrow-right-small arrow"></i>
-      </div>
     </li>
   </ul>
-  <ul class="third">
-    <li class="">
-      <span class="more">展开更多操作记录</span>
-    </li>
-    <li class="second">
+  <div class="third">
+    <div class="more-operation">
+      <p class="more">展开更多操作记录</p>
+    </div>
+    <div class="second-content">
       <img src="http://imgsrc.baidu.com/image/c0%3Dshijue1%2C0%2C0%2C294%2C40/sign=3d2175db3cd3d539d530078052ee8325/b7003af33a87e950c1e1a6491a385343fbf2b425.jpg" alt="">
-      <div class="coment">
-        <span class="name">曹德季</span>
-        <p class="content">这个是文档</p>
+      <div class="right-content">
+        <div class="top-content">
+          <span class="name-content">曹得济</span>
+          <span class="time-last">7.23 19:41</span>
+        </div>
+        <p class="content-core">h哈哈哈哈哈哈哈哈哈哈哈或或或或或或或或</p>
       </div>
-      <span class="third-time">7.23 16:21</span>
-    </li>
-    <li>
+    </div>
+    <div class="second-content">
       <img src="http://imgsrc.baidu.com/image/c0%3Dshijue1%2C0%2C0%2C294%2C40/sign=3d2175db3cd3d539d530078052ee8325/b7003af33a87e950c1e1a6491a385343fbf2b425.jpg" alt="">
-      <div class="coment">
-        <span class="name">曹德季</span>
-        <span class="third-time">7.23 16:21</span>
-        <p class="content">这个是文档这个是文档这个是文档这个是文档这个是文档这个是文档这个是文档这个是文档这个是文档这个是文档</p>
+      <div class="right-content">
+        <div class="top-content">
+          <span class="name-content">曹得济</span>
+          <span class="time-last">7.23</span>
+        </div>
+        <p class="content-core">h哈哈哈哈哈哈哈哈哈哈哈或或或或或或或或哈哈哈哈哈哈哈</p>
       </div>
-    </li>
-  </ul>
-    <ul class="bottom">
-      <li>
-        <input type="text" class="bot">
-        <i class="icon2-add-circle add" ></i>
-        <button class="send">发送</button>
-      </li>
-    </ul>
+    </div>
+  </div>
+    <div class="bottom">
+      <input type="text" class="bot" placeholder="输入你要回复的内容或上传文件">
+      <i class="icon2-add-circle add" ></i>
+      <button class="send">发送</button>
+    </div>
   </div>
 </template>
 <style scoped>
   @import "icomoon2.css";
+  input::-webkit-input-placeholder { /* WebKit browsers */
+    font-family: PingFangSC-Regular;
+    font-size: 17px;
+    color: #999999;
+
+  }
+  input{
+    height: 0.933rem;
+    line-height: 0.933rem;
+  }
+  .more-operation{
+    height:  1.226rem;
+    line-height: 1.226rem;
+    border-bottom:0.5px solid #DADADA ;
+    background-color: white;
+    padding-left: 0.28rem;
+  }
+  .right-content{
+    position: relative;
+    margin-left:0.3rem;
+    top:0.3rem
+  }
+  .top-content{
+    position: relative;
+  }
+  .name-content{
+    font-family: STHeitiSC-Light;
+    font-size: 13px;
+    color: #999999;
+    letter-spacing: 0;
+  }
+  .time{
+    font-family: STHeitiSC-Light;
+    font-size: 10px;
+    color: #999999;
+    letter-spacing: 0;
+  }
+  .time,.date{
+    position: absolute;
+    top:0;
+    left:1.7rem;
+    font-size: 17px;
+    color: #999999;
+  }
+  .person{
+    position: absolute;
+    top:0;
+    left:2rem;
+    font-size: 17px;
+    color: #999999;
+  }
   .send{
     background: #FFFFFF;
     border: 1px solid #55A8FD;
@@ -85,22 +129,26 @@
     font-size: 15px;
     color: #55A8FD;
     letter-spacing: 0;
-    width: 1.433rem;
-    height: 1.005rem;
+    width: 1.386rem;
+    height: 0.933rem;
     position: absolute;
     right: 0.64rem;
     top: 0.15rem;
+    line-height: 0.933rem;
   }
   .bottom{
     position: fixed;
     bottom: 0;
-
+    padding-bottom:10px ;
     width:100%;
+    border-top:0.5px solid #DADADA ;
   }
   .bot{
     display: inline-block;
     width:6.8rem;
     height:0.933rem ;
+    border:0.5px solid #DADADA ;
+    margin-left: 10px;
   }
   .add{
     font-size: 22px;
@@ -111,7 +159,7 @@
     margin-left: 1.013rem;
     position: relative;
   }
-  .second{
+  .second-content{
     border-bottom: none;
   }
   img{
@@ -119,16 +167,17 @@
     width:0.746rem ;
     height:0.746rem;
     border-radius: 50%;
-    top:0.421rem;
+    top:1.61rem;
+    left:0.3rem;
   }
-  .third-time{
+  .time-last{
     font-family: STHeitiSC-Light;
     font-size: 12px;
     color: #999999;
     letter-spacing: 0;
     position: absolute;
     top:2%;
-    right:10%;
+    right:0.5rem;
   }
   .name{
     font-family: STHeitiSC-Light;
@@ -139,22 +188,28 @@
     position: absolute;
     top:0.388rem;
   }
-  .content{
+  .content-core{
     font-family: STHeitiSC-Light;
     font-size: 16px;
     color: #111111;
     letter-spacing: 0;
     line-height: 21px;
-    margin-top: 0.933rem;
-
+    margin-left: 1rem;
+    margin-top:0.1rem;
   }
   .schedule,.alarm,.member,.sub{
+    position: absolute;
     font-size: 18px;
     color:#55A8FD;
+    top:0.35rem;
+  }
+  .schedule{
+
   }
   .check{
     background: #FFFFFF;
-
+    position: absolute;
+    top:0.35rem;
     border-radius: 1px;
     font-size: 18px;
   }
@@ -164,6 +219,7 @@
     color: #333333;
     letter-spacing: 0;
     font-weight:bold;
+    margin-left: 0.87rem;
   }
   .more{
     font-family: PingFangSC-Regular;
@@ -197,25 +253,25 @@
     height: 1.226rem;
     border-bottom: 0.5px solid #DADADA;
   }
-  span{
-  line-height: 1.226rem;
-  }
+
 
   li{
     position:relative;
     padding-left: 3%;
-
+    line-height:1.226rem
   }
-  .third>li{
+  .third{
     border-bottom: 0.5px solid #DADADA;
+    background-color: white;
   }
 
   span{
-    line-height:1.226rem ;
+    /*line-height:1.226rem ;*/
     font-family: PingFangSC-Medium;
     font-size: 19px;
     color: #333333;
     letter-spacing: 0;
+    margin-left: 1rem;
   }
   input{
 
@@ -226,5 +282,8 @@
   }
   .time{
     color: #999999;
+  }
+  .third{
+    position: relative;
   }
 </style>

@@ -16,12 +16,12 @@
     </li>
     <li>
       <i class="icon2-seleced-mult select finish"></i>
-      <span class="finish">测试</span>
+      <span class="finished">测试</span>
 
     </li>
     <li>
       <i class="icon2-seleced-mult select finish"></i>
-      <span class="finish">多级子任务框设计</span>
+      <span class="finished">多级子任务框设计</span>
 
     </li>
 
@@ -48,7 +48,7 @@
     background-color: white;
   }
   .left{
-    position: absolute;
+    /*position: absolute;*/
 
   }
   .select{
@@ -56,10 +56,17 @@
   }
 
   .unfinish{
-
+  position: absolute;
+    top:0.56rem;
   }
 
   .finish{
+
+    position: absolute;
+    top:0.56rem;
+    color:lightgray;
+  }
+  .finished{
     font-family: PingFangSC-Regular;
     font-size: 17px;
     color:lightgray;
@@ -67,18 +74,21 @@
   }
   span{
 
+    margin-left: 0.8rem;
     font-family:PingFangSC-Regular;
     font-size: 17px;
     color: #333333;
-    line-height:1.612rem ;
+
   }
   .date{
     position:absolute ;
+    top:0;
     font-family: PingFangSC-Regular;
     font-size: 15px;
     color: #FF7A7A;
     letter-spacing: 0;
     right:2.7%;
+
 
   }
   ul{
@@ -90,6 +100,7 @@
   }
   li{
     padding:0;
+    line-height:1.612rem ;
     height: 1.612rem;
     position: relative;
     border-bottom:0.5px solid #DADADA ;
@@ -98,7 +109,7 @@
     border: none;
   }
   .bot{
-
+    border-top:0.5px solid #DADADA ;
     height: 1.306rem;
   }
 
@@ -122,7 +133,6 @@
     font-size: 10px;
     color: #999999;
     letter-spacing: 0;
-    margin: 0;
     padding:0;
     margin:0 auto;
     margin-top:-8px;
@@ -132,6 +142,9 @@
     left: 2.053rem;
     bottom:1px;
     padding-bottom:5px;
+    /*display: inline-block;*/
+    /*width: 40%;*/
+    /*text-align: center;*/
   }
   .right{
     text-align: center;
@@ -139,10 +152,17 @@
     position: absolute;
     right: 2.11rem;
     bottom:1px;
+    /*display: inline-block;*/
+    /*width: 40%;*/
+    /*text-align: center;*/
   }
   .mid{
-    text-align: center;
+    /*display: inline-block;*/
 
+    /*width: 20%;*/
+    text-align: center;
+    height: 1.306rem;
+    line-height: 1.306rem;
 
 
   }

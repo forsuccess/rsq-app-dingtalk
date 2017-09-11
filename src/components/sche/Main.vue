@@ -91,7 +91,7 @@
 <style scoped>
   @import "icomoon2.css";
   .bot{
-
+    border-top:0.5px solid #CDCDCD;
     height: 1.306rem;
   }
 

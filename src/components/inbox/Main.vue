@@ -70,19 +70,21 @@ export default {
  .root{
    position:relative;
  }
-  input{
+ input::-webkit-input-placeholder { /* WebKit browsers */
+   font-family: PingFangSC-Regular;
+   font-size: 17px;
+   color: #999999;
+   line-height: 22px;
+ }
+ input{
     height:1.226rem;
     background: #FFFFFF;
     border-bottom:0.5px solid #E3E3E3;
     border-top:0.5px solid #E3E3E3;
     margin-top: 1.974rem;
+   padding-left:0.3rem;
   }
-  input:-webkit-input-placehoder{
-    font-family: PingFangSC-Regular;
-    font-size: 17px;
-    color: #999999;
-    line-height: 22px;
-  }
+
   ul{
     background-color: white;
     margin-top:0.4rem;
@@ -99,8 +101,11 @@ export default {
 
   }
   span{
-
-    line-height: 1.158rem;;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    width:6rem;
+    /*line-height: 1.158rem;;*/
   }
   li{
     border-bottom: 0.5px solid #E3E3E3;

@@ -1,7 +1,7 @@
 <template>
   <div class="root">
     <input type="text" PLACEHOLDER="在这里写下想法"  v-model="editItem.ptitle">
-    <div class="create">创建</div>
+    <div class="create"><p>创建</p></div>
     <ul>
       <li>
         <span class="left">测试数据</span>
@@ -76,8 +76,9 @@
     border-bottom:0.5px solid #E3E3E3;
     border-top:0.5px solid #E3E3E3;
     margin-top: 1.974rem;
+    padding-left: 0.4rem;
   }
-  input:-webkit-input-placehoder{
+  input::-webkit-input-placeholder { /* WebKit browsers */
     font-family: PingFangSC-Regular;
     font-size: 17px;
     color: #999999;
@@ -99,11 +100,16 @@
 
   }
   span{
-
-    line-height: 1.158rem;;
+    display: block;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    width: 60%;
   }
   li{
     border-bottom: 0.5px solid #E3E3E3;
+    height:1.2rem;
+    line-height: 1.2rem;
 
 
   }
@@ -127,14 +133,15 @@
     text-align: center;
     border: 1px solid #55A8FD;
     border-radius: 2px;
-
-    width:14.1%;
-    font-size: 16px;
+    height: 0.666rem;
+    line-height: 0.76rem;
+    width:1.413rem;
+    font-size: 15px;
     color:#55A8FD;
     position: absolute;
     top:0.25rem;
-    left: 82.4%;
-    padding: 2px;
+    right:0.35rem;
+
   }
 
 </style>
